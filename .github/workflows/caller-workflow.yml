@@ -1,0 +1,18 @@
+# .github/workflows/caller-workflow.yml
+
+name: Call Reusable Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      message: "Hello, this is a message from the caller workflow!"
+    env:
+      CUSTOM_ENV_VAR: "This is a custom environment variable from the caller workflow."
