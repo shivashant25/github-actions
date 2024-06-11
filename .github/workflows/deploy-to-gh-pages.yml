@@ -3,7 +3,7 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_call: # This makes the workflow reusable
+  workflow_call:
 
 jobs:
   build-and-deploy:
