@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: Print message
-        run: echo "${{ inputs.message }}"
+        run: echo "Hi, this message is from primary workflow"
