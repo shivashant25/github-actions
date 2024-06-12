@@ -1,0 +1,12 @@
+name: Caller Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/printmessage.yml
+    with:
+      message: "Hello from the caller workflow!"
